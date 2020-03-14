@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Easy Flight</string>
+    <string name="developernames">Paras Lakhdeep Savita</string>
+    <string name="from">From :-</string>
+    <string name="splash_screen_logo">splash_screen_logo</string>
+    <string name="log_sign_logo">log/sign_logo</string>
+    <string name="e_mail_or_username">E-mail or Username</string>
+    <string name="password">Password</string>
+    <string name="remember_me_radiobutton">Remember me</string>
+    <string name="log_in_button">Log In</string>
+    <string name="forget_password">Forget Password?</string>
+    <string name="text_or">OR</string>
+    <string name="sign_up_button">Sign Up</string>
+</resources>
