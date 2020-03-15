@@ -2,21 +2,35 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/google_logo"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FF914D"
-    tools:context=".MainActivity">
+    tools:context=".SignupActivity">
 
-    <Button
-        android:id="@+id/button_signup"
-        android:layout_width="220dp"
-        android:layout_height="54dp"
-        android:layout_marginStart="72dp"
-        android:layout_marginTop="20dp"
-        android:text="@string/sign_up_button"
+    <ImageView
+        android:id="@+id/image_Small_logo"
+        android:layout_width="227dp"
+        android:layout_height="210dp"
+        android:layout_marginTop="25dp"
+        android:contentDescription="@string/log_sign_logo"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView_seperate" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo" />
+
+    <EditText
+        android:id="@+id/edit_username"
+        android:layout_width="263dp"
+        android:layout_height="57dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="25dp"
+        android:autofillHints="@string/e_mail_or_username"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:labelFor="@id/edit_username"
+        android:text="@string/e_mail_id"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image_Small_logo" />
 
     <EditText
         android:id="@+id/edit_password"
@@ -33,77 +47,41 @@
         app:layout_constraintTop_toBottomOf="@+id/edit_username"
         tools:ignore="TextFields" />
 
-    <ImageView
-        android:id="@+id/image_Small_logo"
-        android:layout_width="227dp"
-        android:layout_height="210dp"
-        android:layout_marginTop="25dp"
-        android:contentDescription="@string/log_sign_logo"
-        app:layout_constraintEnd_toEndOf="parent"
+    <EditText
+        android:id="@+id/edit_confirm_password"
+        android:layout_width="262dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="15dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/password"
+        android:inputType="textPersonName"
+        android:text="@string/confirm_password"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/logo" />
+        app:layout_constraintTop_toBottomOf="@+id/edit_password"
+        tools:ignore="TextFields" />
 
     <RadioButton
-        android:id="@+id/radioButton"
+        android:id="@+id/radioButton_sign_up"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="55dp"
         android:layout_marginTop="7dp"
         android:text="@string/remember_me_radiobutton"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edit_password"
+        app:layout_constraintTop_toBottomOf="@id/edit_confirm_password"
         tools:ignore="UnknownId" />
 
-    <EditText
-        android:id="@+id/edit_username"
-        android:layout_width="263dp"
-        android:layout_height="57dp"
-        android:layout_marginStart="60dp"
-        android:layout_marginTop="25dp"
-        android:autofillHints="@string/e_mail_or_username"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:labelFor="@id/edit_username"
-        android:text="@string/e_mail_or_username"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/image_Small_logo" />
-
     <Button
-        android:id="@+id/button_login"
+        android:id="@+id/button_sign_up"
         android:layout_width="220dp"
         android:layout_height="54dp"
         android:layout_marginStart="75dp"
         android:layout_marginTop="25dp"
-        android:text="@string/log_in_button"
+        android:text="@string/sign_up_button"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/radioButton" />
-
-    <TextView
-        android:id="@+id/textView_forget_pass"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="200dp"
-        android:layout_marginTop="7dp"
-        android:shadowColor="#FFFFFF"
-        android:text="@string/forget_password"
-        android:textColor="#000000"
-        android:textSize="15sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edit_password" />
-
-    <TextView
-        android:id="@+id/textView_seperate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="175dp"
-        android:layout_marginTop="15dp"
-        android:gravity="center_vertical"
-        android:text="@string/text_or"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_login" />
+        app:layout_constraintTop_toBottomOf="@+id/radioButton_sign_up" />
 
     <ImageView
         android:id="@+id/google_logo_signUp"
@@ -114,7 +92,7 @@
         android:contentDescription="@string/sign_up_with_google"
         android:src="@drawable/google_logo"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_signup"
+        app:layout_constraintTop_toBottomOf="@+id/button_sign_up"
         tools:ignore="MissingConstraints" />
 
     <ImageView
@@ -126,7 +104,7 @@
         android:contentDescription="@string/sign_up_with_facebook"
         android:src="@drawable/facebook_logo"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_signup"
+        app:layout_constraintTop_toBottomOf="@+id/button_sign_up"
         tools:ignore="MissingConstraints" />
 
     <TextView

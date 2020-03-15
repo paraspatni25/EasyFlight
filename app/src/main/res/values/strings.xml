@@ -11,4 +11,9 @@
     <string name="forget_password">Forget Password?</string>
     <string name="text_or">OR</string>
     <string name="sign_up_button">Sign Up</string>
+    <string name="e_mail_id">E-mail</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="sign_up_with_google">Sign up with google</string>
+    <string name="sign_up_with_facebook">sign up with Facebook</string>
+    <string name="skip">SKIP</string>
 </resources>
