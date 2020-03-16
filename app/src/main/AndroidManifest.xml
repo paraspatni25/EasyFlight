@@ -9,7 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".SettingActivity"></activity>
+        <activity
+            android:name=".Transaction_success_Activity"
+            android:theme="@style/Theme.AppCompat.NoActionBar"></activity>
+        <activity android:name=".DashboardActivity" />
+        <activity android:name=".SettingActivity" />
         <activity android:name=".SignupActivity" />
         <activity
             android:name=".SplashScreen"

@@ -16,4 +16,13 @@
     <string name="sign_up_with_google">Sign up with google</string>
     <string name="sign_up_with_facebook">sign up with Facebook</string>
     <string name="skip">SKIP</string>
+    <string name="welcome_text">Welcome</string>
+    <string name="back">Back</string>
+    <string name="transaction">Transaction</string>
+    <string name="successful">Successful</string>
+    <string name="transaction_done_clipart">Transaction</string>
+    <string name="please_activate_your_ticket">Please activate your ticket</string>
+    <string name="before_boarding">before boarding</string>
+    <string name="redirecting_text">Automatically redirecting back to app</string>
+    <string name="reloading_clipart">reloading clipart</string>
 </resources>
