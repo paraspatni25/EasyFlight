@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         //Creating an on click listener on sign_up button to directly move on to Sign_up activity.
-        Sign_button = findViewById(R.id.button_signup);
+        Sign_button = findViewById(R.id.button_sign_up);
         Sign_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
