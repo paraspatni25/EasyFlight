@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Easy Flight</string>
     <string name="developer_names">Paras Lakhdeep Savita</string>
-    <string name="from">From :-</string>
+    <string name="from">From </string>
     <string name="splash_screen_logo">splash_screen_logo</string>
     <string name="log_sign_logo">log/sign_logo</string>
     <string name="e_mail_or_username">Username</string>
@@ -26,4 +26,14 @@
     <string name="redirecting_text">Automatically redirecting back to app</string>
     <string name="reloading_clipart">reloading clipart</string>
     <string name="easy_flight_app_name">Easy Flight</string>
+    <string name="to">To</string>
+    <string name="departure_text">Departure</string>
+    <string name="_15_apr">15 APR</string>
+    <string name="return_text">Return</string>
+    <string name="_21_arp">21 ARP</string>
+    <string name="passenger_label_text">Passenger</string>
+    <string name="adults_label">ADULTS</string>
+    <string name="_12_years_adult_age">12+ years</string>
+    <string name="children_text">CHILDREN</string>
+    <string name="_1_12_years">1-12 years</string>
 </resources>
