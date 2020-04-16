@@ -34,11 +34,12 @@ dependencies {
     //Adding Circular Image
     implementation 'de.hdodenhof:circleimageview:3.1.0'
     //noinspection GradleCompatible
-    implementation 'com.android.support:design:28.0.0'
+    implementation 'androidx.appcompat:appcompat:1.0.0'
     //noinspection GradleCompatible
-    implementation 'com.android.support:appcompat-v7:28.0.0'
-    //noinspection GradleCompatible
-    implementation 'com.android.support:cardview-v7:28.0.0'
-    implementation "com.google.android.material:material:1.0.0"
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'com.google.android.material:material:1.2.0-alpha02'
+    implementation 'com.google.android.material:material:1.1.0'
+
+
 
 }

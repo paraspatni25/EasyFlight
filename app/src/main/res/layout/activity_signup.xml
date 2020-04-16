@@ -98,7 +98,7 @@
         android:layout_marginStart="100dp"
         android:layout_marginTop="20dp"
         android:contentDescription="@string/sign_up_with_google"
-        android:src="@drawable/google_logo"
+        app:srcCompat="@drawable/google_logo"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button_sign_up"
         tools:ignore="MissingConstraints" />
@@ -110,7 +110,7 @@
         android:layout_marginStart="200dp"
         android:layout_marginTop="20dp"
         android:contentDescription="@string/sign_up_with_facebook"
-        android:src="@drawable/facebook_logo"
+        app:srcCompat="@drawable/facebook_logo"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button_sign_up"
         tools:ignore="MissingConstraints" />

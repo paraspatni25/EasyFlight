@@ -16,7 +16,7 @@
         android:layout_marginEnd="20dp"
         android:contentDescription="@string/splash_screen_logo"
         android:foregroundGravity="center"
-        android:src="@drawable/logo"
+        app:srcCompat="@drawable/logo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

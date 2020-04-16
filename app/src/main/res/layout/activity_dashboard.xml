@@ -4,7 +4,39 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical"
     tools:context=".DashboardActivity">
+
+    <com.google.android.material.button.MaterialButtonToggleGroup
+        android:id="@+id/toggleGroup2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:weightSum="2"
+        app:checkedButton="@id/btnA"
+        app:singleSelection="true">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnA"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="One Way"
+            app:shapeAppearance="@style/Rounded" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnS"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Round Trip"
+            app:shapeAppearance="@style/Rounded" />
+
+    </com.google.android.material.button.MaterialButtonToggleGroup>
 
     <ScrollView
         android:layout_width="match_parent"
@@ -14,7 +46,7 @@
             android:id="@+id/card_search"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="25dp"
+            android:layout_margin="15dp"
             app:cardCornerRadius="10dp"
             app:cardElevation="7dp">
 
@@ -22,34 +54,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
-                <com.google.android.material.button.MaterialButtonToggleGroup
-                    android:id="@+id/toggleGroup"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    app:checkedButton="@id/btnAndroid"
-                    app:singleSelection="true">
-
-                    <Button
-                        android:id="@+id/btnAndroid"
-                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Android" />
-
-                    <Button
-                        android:id="@+id/btniOS"
-                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="iOS" />
-
-                </com.google.android.material.button.MaterialButtonToggleGroup>
-
                 <LinearLayout
                     android:id="@+id/from_to_layout"
+                    android:layout_marginTop="10dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/toggleGroup"
                     android:orientation="horizontal"
                     android:weightSum="3">
 
@@ -92,7 +101,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:layout_gravity="center_horizontal"
-                            android:src="@drawable/ic_swap_horiz_black_24dp" />
+                            app:srcCompat="@drawable/ic_swap_horiz_black_24dp" />
 
                     </LinearLayout>
 
@@ -130,6 +139,8 @@
                     android:id="@+id/line_separator_city_date"
                     android:layout_width="fill_parent"
                     android:layout_height="2dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
                     android:layout_below="@+id/from_to_layout"
                     android:layout_alignParentRight="true"
                     android:layout_marginTop="21dp"
@@ -213,6 +224,8 @@
                     android:layout_below="@+id/date_departure_return_layout"
                     android:layout_alignParentRight="true"
                     android:layout_marginTop="21dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
                     android:background="#ff914d" />
 
                 <LinearLayout
@@ -279,7 +292,7 @@
                                 android:id="@+id/adult_increase"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:src="@drawable/ic_adult_increase_24dp" />
+                                app:srcCompat="@drawable/ic_adult_increase_24dp" />
 
                             <TextView
                                 android:layout_width="wrap_content"
@@ -295,7 +308,7 @@
                                 android:id="@+id/adult_decrease"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:src="@drawable/ic_adult_decrease_24dp" />
+                                app:srcCompat="@drawable/ic_adult_decrease_24dp" />
                         </LinearLayout>
 
                     </LinearLayout>
@@ -349,7 +362,7 @@
                                 android:id="@+id/child_increase"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:src="@drawable/ic_adult_increase_24dp" />
+                                app:srcCompat="@drawable/ic_adult_increase_24dp" />
 
                             <TextView
                                 android:layout_width="wrap_content"
@@ -365,7 +378,7 @@
                                 android:id="@+id/child_decrease"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:src="@drawable/ic_adult_decrease_24dp" />
+                                app:srcCompat="@drawable/ic_adult_decrease_24dp" />
                         </LinearLayout>
 
                     </LinearLayout>
