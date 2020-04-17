@@ -10,19 +10,19 @@ import android.widget.TextView;
 
 public class SignupActivity extends AppCompatActivity {
 
-    Button Sign_button;
-    TextView Skip;
+    TextView Sign_button;
+    TextView Already_user;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signup);
 
-        Skip = findViewById(R.id.text_Skip);
-        Skip.setOnClickListener(new View.OnClickListener() {
+        Already_user = findViewById(R.id.text_register_user);
+        Already_user.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(SignupActivity.this, DashboardActivity.class);
+                Intent i = new Intent(SignupActivity.this, LoginActivity.class);
                 startActivity(i);
             }
         });

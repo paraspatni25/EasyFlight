@@ -36,4 +36,10 @@
     <string name="_12_years_adult_age">12+ years</string>
     <string name="children_text">CHILDREN</string>
     <string name="_1_12_years">1-12 years</string>
+    <string name="one_way">One Way</string>
+    <string name="round_trip">Round Trip</string>
+    <string name="non_stop_check_box">Non stop flights only</string>
+    <string name="search_flights_label">SEARCH FLIGHTS</string>
+    <string name="text_user_register_here">Not on Easy Flight? Sign Up!</string>
+    <string name="text__user_log_in">Already an User? Log In here!</string>
 </resources>

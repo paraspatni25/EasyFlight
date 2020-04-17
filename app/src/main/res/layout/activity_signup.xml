@@ -1,118 +1,126 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FF914D"
+    android:background="@drawable/gradient_background_dashboard"
     tools:context=".SignupActivity">
-
-    <TextView
-        android:id="@+id/text_Skip"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="305dp"
-        android:layout_marginTop="16dp"
-        android:text="@string/skip"
-        android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/image_Small_logo"
         android:layout_width="227dp"
         android:layout_height="210dp"
-        android:layout_marginTop="25dp"
+        android:layout_centerHorizontal="true"
         android:contentDescription="@string/log_sign_logo"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/logo" />
+        android:layout_marginTop="100dp"
+        app:srcCompat="@drawable/logo_transparent" />
 
     <EditText
         android:id="@+id/edit_username"
-        android:layout_width="263dp"
-        android:layout_height="57dp"
-        android:layout_marginStart="60dp"
-        android:layout_marginTop="25dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/image_Small_logo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginRight="50dp"
         android:hint="@string/e_mail_or_username"
+        android:drawableStart="@drawable/ic_person_black_24dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:labelFor="@id/edit_username"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/image_Small_logo" />
+        android:labelFor="@id/edit_username" />
 
     <EditText
         android:id="@+id/edit_password"
-        android:layout_width="262dp"
-        android:layout_height="45dp"
-        android:layout_marginStart="60dp"
-        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edit_username"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginRight="50dp"
         android:autofillHints=""
         android:ems="10"
         android:hint="@string/password"
+        android:drawableLeft="@drawable/password_key_image"
         android:inputType="textPersonName"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edit_username"
         tools:ignore="TextFields" />
 
     <EditText
         android:id="@+id/edit_confirm_password"
-        android:layout_width="262dp"
-        android:layout_height="45dp"
-        android:layout_marginStart="60dp"
-        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edit_password"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginRight="50dp"
         android:autofillHints=""
+        android:drawableLeft="@drawable/password_key_image"
         android:ems="10"
-        android:hint="@string/password"
+        android:hint="@string/confirm_password"
         android:inputType="textPersonName"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edit_password"
         tools:ignore="TextFields" />
 
     <CheckBox
         android:id="@+id/radioButton_sign_up"
+        android:layout_below="@+id/edit_confirm_password"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="55dp"
-        android:layout_marginTop="7dp"
         android:text="@string/remember_me_radiobutton"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/edit_confirm_password"
-        tools:ignore="UnknownId" />
+        android:textColor="#ff914d" />
 
     <Button
         android:id="@+id/button_sign_up"
-        android:layout_width="220dp"
-        android:layout_height="54dp"
-        android:layout_marginStart="75dp"
-        android:layout_marginTop="25dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/radioButton_sign_up"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="120dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="120dp"
         android:text="@string/sign_up_button"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/radioButton_sign_up" />
+        android:background="@drawable/round_corner_button_2" />
 
-    <ImageView
-        android:id="@+id/google_logo_signUp"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="20dp"
-        android:contentDescription="@string/sign_up_with_google"
-        app:srcCompat="@drawable/google_logo"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_sign_up"
-        tools:ignore="MissingConstraints" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/button_sign_up"
+        android:layout_marginLeft="135dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="135dp"
+        android:orientation="horizontal">
 
-    <ImageView
-        android:id="@+id/facebook_logo_signUp"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="200dp"
-        android:layout_marginTop="20dp"
-        android:contentDescription="@string/sign_up_with_facebook"
-        app:srcCompat="@drawable/facebook_logo"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_sign_up"
-        tools:ignore="MissingConstraints" />
+        <ImageView
+            android:id="@+id/google_logo_signUp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
+            android:contentDescription="@string/sign_up_with_google"
+            app:srcCompat="@drawable/google_logo" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <ImageView
+            android:id="@+id/facebook_logo_signUp"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_alignParentRight="true"
+            android:contentDescription="@string/sign_up_with_facebook"
+            app:srcCompat="@drawable/facebook_logo"
+            tools:ignore="MissingConstraints" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/text_register_user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="40dp"
+        android:text="@string/text__user_log_in"
+        android:textColor="#ff914d"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+</RelativeLayout>
