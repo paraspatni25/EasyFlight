@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/google_logo"
     android:layout_width="match_parent"
@@ -98,7 +97,7 @@
         android:layout_marginTop="25dp"
         android:layout_marginRight="120dp"
         android:text="@string/log_in_button"
-        android:background="@drawable/round_corner_button_2" />
+        android:background="@drawable/round_corner_button" />
 
     <TextView
         android:id="@+id/text_register_user"

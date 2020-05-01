@@ -536,7 +536,7 @@
                     android:layout_below="@+id/checkbox_non_stop_flight"
                     android:layout_centerHorizontal="true"
                     android:layout_marginBottom="25dp"
-                    android:background="@drawable/round_corner_button_2"
+                    android:background="@drawable/round_corner_button"
                     android:text="@string/search_flights_label"
                     android:textColor="#ffffff" />
 

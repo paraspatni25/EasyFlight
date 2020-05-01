@@ -42,4 +42,5 @@
     <string name="search_flights_label">SEARCH FLIGHTS</string>
     <string name="text_user_register_here">Not on Easy Flight? Sign Up!</string>
     <string name="text__user_log_in">Already an User? Log In here!</string>
+    <string name="settings_tittle">Settings</string>
 </resources>
