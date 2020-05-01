@@ -9,6 +9,17 @@ public class FlightData {
     private String flightCode;
     private String flightPrice;
     private String flightStopNumber;
+    private String airwaysName;
+
+    public String getAirwaysName() {
+        if (airwaysName == null)
+            return "";
+        return airwaysName;
+    }
+
+    public void setAirwaysName(String airwaysName) {
+        this.airwaysName = airwaysName;
+    }
 
     public String getDepartureStation() {
         return departureStation;

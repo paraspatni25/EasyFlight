@@ -34,6 +34,7 @@ public class DataBase {
         data.setFlightCode("AC787");
         data.setFlightPrice("1111");
         data.setFlightStopNumber("1 stop");
+        data.setAirwaysName("Air Canada");
         flightData.add(data);
 
         data = new FlightData();
@@ -45,6 +46,7 @@ public class DataBase {
         data.setFlightCode("UA887");
         data.setFlightPrice("1331");
         data.setFlightStopNumber("2 stop");
+        data.setAirwaysName("United Airways");
         flightData.add(data);
 
 
@@ -57,6 +59,7 @@ public class DataBase {
         data.setFlightCode("AF589");
         data.setFlightPrice("1666");
         data.setFlightStopNumber("1 stop");
+        data.setAirwaysName("Air France");
         flightData.add(data);
 
         data = new FlightData();
@@ -65,8 +68,9 @@ public class DataBase {
         data.setArrivalTime("15:00");
         data.setDepartureTime("02:30");
         data.setFlightHaltTime("6hrs 30min");
-        data.setFlightCode("JT828");
+        data.setFlightCode("JA828");
         data.setFlightPrice("960");
+        data.setAirwaysName("Jet Airways");
         data.setFlightStopNumber("2 stop");
         flightData.add(data);
 
@@ -77,6 +81,7 @@ public class DataBase {
         data.setDepartureTime("13:30");
         data.setFlightCode("ET486");
         data.setFlightPrice("1650");
+        data.setAirwaysName("Etihad Airways");
         data.setFlightStopNumber("Non-stop");
         flightData.add(data);
 
@@ -88,6 +93,7 @@ public class DataBase {
         data.setFlightHaltTime("8hrs 45min");
         data.setFlightCode("AC987");
         data.setFlightPrice("900");
+        data.setAirwaysName("Air China");
         data.setFlightStopNumber("1 stop");
         flightData.add(data);
 
@@ -99,6 +105,7 @@ public class DataBase {
         data.setFlightHaltTime("5hrs 55min");
         data.setFlightCode("BA887");
         data.setFlightPrice("1564");
+        data.setAirwaysName("British Airways");
         data.setFlightStopNumber("1 stop");
         flightData.add(data);
 
@@ -110,6 +117,7 @@ public class DataBase {
         data.setFlightHaltTime("3hrs 35min");
         data.setFlightCode("UK911");
         data.setFlightPrice("1222");
+        data.setAirwaysName("United Kingdom Airways");
         data.setFlightStopNumber("3 stop");
         flightData.add(data);
 
@@ -119,6 +127,7 @@ public class DataBase {
         data.setArrivalTime("17:00");
         data.setDepartureTime("14:30");
         data.setFlightCode("UA287");
+        data.setAirwaysName("United Airways");
         data.setFlightPrice("265");
         data.setFlightStopNumber("Non-stop");
         flightData.add(data);
@@ -130,6 +139,7 @@ public class DataBase {
         data.setDepartureTime("16:30");
         data.setFlightHaltTime("4hrs 35min");
         data.setFlightCode("SW753");
+        data.setAirwaysName("Swiss");
         data.setFlightPrice("1265");
         data.setFlightStopNumber("2 stop");
         flightData.add(data);

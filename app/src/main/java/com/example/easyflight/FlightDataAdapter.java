@@ -14,6 +14,8 @@ public class FlightDataAdapter extends RecyclerView.Adapter<FlightDataAdapter.Vi
 
     ArrayList<FlightData> flights;
 
+    private View.OnClickListener listener;
+
     public FlightDataAdapter(ArrayList<FlightData> flights) {
 
         this.flights = flights;
@@ -46,6 +48,10 @@ public class FlightDataAdapter extends RecyclerView.Adapter<FlightDataAdapter.Vi
         return flights.size();
     }
 
+    public void setOnItemClickListner(View.OnClickListener itemClickListner) {
+        listener = itemClickListner;
+    }
+
     public class ViewHolder extends RecyclerView.ViewHolder {
         TextView departure_station, arrival_station, departure_time, arrival_time, flight_halt_time, flight_code, flight_price, flight_stop_number;
 
@@ -60,6 +66,9 @@ public class FlightDataAdapter extends RecyclerView.Adapter<FlightDataAdapter.Vi
             flight_code = itemView.findViewById(R.id.flight_number);
             flight_price = itemView.findViewById(R.id.flight_price);
             flight_stop_number = itemView.findViewById(R.id.text_number_of_stops);
+
+            itemView.setTag(this);
+            itemView.setOnClickListener(listener);
         }
     }
 }

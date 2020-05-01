@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -20,7 +19,8 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical|start"
             android:layout_marginStart="10dp"
-            android:src="@drawable/ic_chevron_left_black_24dp" />
+            android:src="@drawable/back_icon_"
+            tools:ignore="ContentDescription" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -28,142 +28,167 @@
             android:layout_centerHorizontal="true"
             android:gravity="center_vertical"
             android:text="@string/settings_tittle"
-            android:textColor="#ffffff"
+            android:textColor="@color/white"
             android:textSize="20sp"
             android:textStyle="bold" />
     </RelativeLayout>
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardView_basic"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <RelativeLayout
+        android:id="@+id/Layout_username_image"
+        android:layout_width="match_parent"
+        android:layout_height="125dp"
         android:layout_below="@+id/text_title"
-        android:layout_margin="15dp"
-        app:cardCornerRadius="10dp"
-        app:cardElevation="7dp">
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/user_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="10dp"
+            android:src="@drawable/user_image_circle"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/userName"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_vertical"
+            android:text="@string/username"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
 
         <RelativeLayout
+            android:id="@+id/settings_option_layout"
+            android:layout_height="wrap_content"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="50dp">
 
             <Button
                 android:id="@+id/button_theme"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="0dp"
-                android:layout_marginEnd="30sp"
-                android:background="@drawable/button_setting"
-                android:text="Themes" />
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="30dp"
+                android:drawableEnd="@drawable/arrow_setting_button"
+                android:paddingStart="25dp"
+                android:text="@string/themes"
+                android:textAlignment="viewStart"
+                android:textAllCaps="false"
+                tools:ignore="RtlSymmetry" />
 
             <Button
                 android:id="@+id/button_preferences"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/button_theme"
-                android:layout_marginStart="0dp"
-                android:layout_marginEnd="30sp"
-                android:background="@drawable/button_setting"
-                android:text="Preferences" />
+                android:layout_below="@+id/button_theme"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="30dp"
+                android:drawableEnd="@drawable/arrow_setting_button"
+                android:text="@string/preferences"
+                android:textAlignment="viewStart"
+                android:textAllCaps="false" />
 
             <Button
                 android:id="@+id/button_security_data"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/button_preferences"
-                android:layout_marginStart="0dp"
-                android:layout_marginEnd="30sp"
-                android:background="@drawable/button_setting"
-                android:text="Security &amp; Data" />
+                android:layout_below="@+id/button_preferences"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="30dp"
+                android:drawableEnd="@drawable/arrow_setting_button"
+                android:text="@string/security_amp_data"
+                android:textAlignment="viewStart"
+                android:textAllCaps="false" />
 
             <Button
                 android:id="@+id/button_advance_setting"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/button_security_data"
-                android:layout_marginStart="0dp"
-                android:layout_marginEnd="30sp"
-                android:background="@drawable/button_setting"
-                android:text="Advance Setting" />
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="30dp"
+                android:drawableEnd="@drawable/arrow_setting_button"
+                android:text="@string/advance_setting"
+                android:textAlignment="viewStart"
+                android:textAllCaps="false" />
 
-        </RelativeLayout>
-
-    </androidx.cardview.widget.CardView>
-
-    <Button
-        android:id="@+id/button_follow_us"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/cardView_basic"
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="25dp"
-        android:layout_marginEnd="30sp"
-        android:background="@drawable/button_setting"
-        android:text="Follow Us" />
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardView_extra"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/button_follow_us"
-        android:layout_margin="15dp"
-        app:cardCornerRadius="10dp"
-        app:cardElevation="7dp">
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            <Button
+                android:id="@+id/button_follow_us"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/button_advance_setting"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="30dp"
+                android:drawableEnd="@drawable/arrow_setting_button"
+                android:text="@string/follow_us"
+                android:textAlignment="viewStart"
+                android:textAllCaps="false" />
 
             <Button
                 android:id="@+id/button_tutorial"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="0dp"
-                android:layout_marginEnd="30sp"
-                android:background="@drawable/button_setting"
-                android:text="Tutorial" />
+                android:layout_below="@+id/button_follow_us"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="30dp"
+                android:drawableEnd="@drawable/arrow_setting_button"
+                android:text="@string/tutorial"
+                android:textAlignment="viewStart"
+                android:textAllCaps="false" />
 
             <Button
                 android:id="@+id/button_help"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/button_tutorial"
-                android:layout_marginStart="0dp"
-                android:layout_marginEnd="30sp"
-                android:background="@drawable/button_setting"
-                android:text="Help" />
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="30dp"
+                android:drawableEnd="@drawable/arrow_setting_button"
+                android:text="@string/help"
+                android:textAlignment="viewStart"
+                android:textAllCaps="false" />
 
             <Button
                 android:id="@+id/button_feedback_suggestion"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/button_help"
-                android:layout_marginStart="0dp"
-                android:layout_marginEnd="30sp"
-                android:background="@drawable/button_setting"
-                android:text="Feedback &amp; Suggestion" />
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="30dp"
+                android:drawableEnd="@drawable/arrow_setting_button"
+                android:text="@string/feedback_amp_suggestion"
+                android:textAlignment="viewStart"
+                android:textAllCaps="false" />
 
             <Button
                 android:id="@+id/button_about"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/button_feedback_suggestion"
-                android:layout_marginStart="0dp"
-                android:layout_marginEnd="30sp"
-                android:background="@drawable/button_setting"
-                android:text="About" />
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="30dp"
+                android:drawableEnd="@drawable/arrow_setting_button"
+                android:text="@string/about"
+                android:textAlignment="viewStart"
+                android:textAllCaps="false" />
 
             <Button
                 android:id="@+id/button_contact"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/button_about"
-                android:layout_marginStart="0dp"
-                android:layout_marginEnd="30sp"
-                android:background="@drawable/button_setting"
-                android:text="Contact Us" />
-
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="30dp"
+                android:drawableEnd="@drawable/arrow_setting_button"
+                android:text="@string/contact_us"
+                android:textAlignment="viewStart"
+                android:textAllCaps="false" />
         </RelativeLayout>
-
-    </androidx.cardview.widget.CardView>
 
 </RelativeLayout>

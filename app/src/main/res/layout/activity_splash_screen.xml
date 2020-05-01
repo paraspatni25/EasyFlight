@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".SplashScreen"
-    android:background="#ff914d">
+    android:background="@color/colorPrimary">
 
     <ImageView
         android:id="@+id/logo"
@@ -29,7 +29,7 @@
         android:layout_marginTop="80dp"
         android:fontFamily="@font/sanchez_italic"
         android:text="@string/from"
-        android:textColor="#ffffff"
+        android:textColor="@color/white"
         android:textSize="30sp"
         android:textStyle="italic"
         app:layout_constraintStart_toStartOf="parent"
@@ -43,7 +43,7 @@
         android:layout_marginTop="45dp"
         android:fontFamily="@font/sanchez_italic"
         android:textAlignment="center"
-        android:textColor="#ffffff"
+        android:textColor="@color/white"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

@@ -20,7 +20,8 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical|start"
             android:layout_marginStart="10dp"
-            android:src="@drawable/ic_chevron_left_black_24dp" />
+            android:src="@drawable/back_icon_"
+            tools:ignore="ContentDescription" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -28,19 +29,79 @@
             android:layout_centerHorizontal="true"
             android:gravity="center_vertical"
             android:text="@string/search_flights_label"
-            android:textColor="#ffffff"
+            android:textColor="@color/white"
             android:textSize="20sp"
             android:textStyle="bold" />
 
     </RelativeLayout>
 
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginRight="15dp"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="7dp">
+
+        <LinearLayout
+            android:id="@+id/alert_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/blue"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:src="@drawable/warning_alert_box"
+                tools:ignore="ContentDescription" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/travel_advisory"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/travel_warning"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/underline_text"
+                    android:text="@string/find_out_more"
+                    android:textColor="@color/white" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
 
     <com.google.android.material.button.MaterialButtonToggleGroup
         android:id="@+id/toggleGroup2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="65dp"
+        android:layout_marginTop="5dp"
         android:layout_marginRight="20dp"
         android:weightSum="2"
         app:checkedButton="@id/button_for_one_way"
@@ -53,8 +114,8 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="@string/one_way"
-            android:textColor="#ffff"
-            app:strokeColor="#fff"
+            android:textColor="@color/white"
+            app:strokeColor="@color/white"
             app:shapeAppearance="@style/Rounded" />
 
         <com.google.android.material.button.MaterialButton
@@ -63,9 +124,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/round_trip"
-            android:textColor="#ffff"
+            android:textColor="@color/white"
+            app:strokeColor="@color/white"
             android:layout_weight="1"
-            app:strokeColor="#fff"
             app:shapeAppearance="@style/Rounded" />
 
     </com.google.android.material.button.MaterialButtonToggleGroup>
@@ -92,6 +153,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
                     android:orientation="horizontal"
+                    android:baselineAligned="false"
                     android:weightSum="3">
 
                     <LinearLayout
@@ -105,20 +167,24 @@
                         <TextView
                             android:id="@+id/text_from"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_height="0dp"
                             android:layout_marginTop="11dp"
                             android:layout_weight="1"
                             android:text="@string/from"
                             android:textAlignment="center"
-                            android:textColor="#000000"
-                            android:textSize="15sp" />
+                            android:textColor="@color/grey"
+                            android:textSize="15sp"
+                            tools:ignore="NestedWeights" />
 
                         <TextView
                             android:id="@+id/text_delhi"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Delhi"
-                            android:textAlignment="center" />
+                            android:text="@string/delhi"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
 
                     </LinearLayout>
 
@@ -133,7 +199,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:layout_gravity="center_horizontal"
-                            app:srcCompat="@drawable/ic_swap_horiz_black_24dp" />
+                            app:srcCompat="@drawable/swap_horiz"
+                            tools:ignore="ContentDescription" />
 
                     </LinearLayout>
 
@@ -153,14 +220,17 @@
                             android:layout_height="wrap_content"
                             android:text="@string/to"
                             android:textAlignment="center"
-                            android:textColor="#000000"
+                            android:textColor="@color/grey"
                             android:textSize="15sp" />
 
                         <TextView
                             android:id="@+id/text_to_station"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Mumbai" />
+                            android:text="@string/mumbai"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
 
                     </LinearLayout>
 
@@ -175,7 +245,7 @@
                     android:layout_marginLeft="20dp"
                     android:layout_marginTop="21dp"
                     android:layout_marginRight="20dp"
-                    android:background="#ff914d" />
+                    android:background="@color/colorPrimary" />
 
                 <LinearLayout
                     android:id="@+id/date_departure_return_layout"
@@ -183,6 +253,7 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/line_separator_city_date"
                     android:orientation="horizontal"
+                    android:baselineAligned="false"
                     android:weightSum="2">
 
                     <LinearLayout
@@ -194,16 +265,31 @@
                         android:gravity="center|start"
                         android:orientation="vertical">
 
-                        <TextView
-                            android:id="@+id/text_departure"
+                        <LinearLayout
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="11dp"
-                            android:layout_weight="1"
-                            android:text="@string/departure_text"
-                            android:textAlignment="center"
-                            android:textColor="#000000"
-                            android:textSize="15sp" />
+                            android:layout_marginTop="10dp"
+                            android:gravity="center"
+                            tools:ignore="UseCompoundDrawables">
+
+                            <TextView
+                                android:id="@+id/text_departure"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/departure_text"
+                                android:textAlignment="center"
+                                android:textColor="@color/grey"
+                                android:textSize="15sp" />
+
+                            <ImageView
+                                android:id="@+id/departure_calender"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="5dp"
+                                android:src="@drawable/calendar"
+                                tools:ignore="ContentDescription" />
+
+                        </LinearLayout>
 
                         <TextView
                             android:id="@+id/text_departure_date"
@@ -211,14 +297,14 @@
                             android:layout_height="wrap_content"
                             android:text="@string/_15_apr"
                             android:textAlignment="center"
-                            android:textColor="#ff914d"
+                            android:textColor="@color/colorPrimary"
                             android:textStyle="bold" />
 
                         <TextView
                             android:id="@+id/text_departure_day"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Monday 2020"
+                            android:text="@string/monday_2020"
                             android:textAlignment="center"
                             android:textSize="12sp" />
 
@@ -233,15 +319,31 @@
                         android:gravity="center|end"
                         android:orientation="vertical">
 
-                        <TextView
-                            android:id="@+id/text_return"
+                        <LinearLayout
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="11dp"
-                            android:text="@string/return_text"
-                            android:textAlignment="center"
-                            android:textColor="#000000"
-                            android:textSize="15sp" />
+                            android:layout_marginTop="10dp"
+                            android:gravity="center"
+                            tools:ignore="UseCompoundDrawables">
+
+                            <TextView
+                                android:id="@+id/text_return"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/return_text"
+                                android:textAlignment="center"
+                                android:textColor="@color/grey"
+                                android:textSize="15sp" />
+
+                            <ImageView
+                                android:id="@+id/return_calender"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="5dp"
+                                android:src="@drawable/calendar"
+                                tools:ignore="ContentDescription" />
+
+                        </LinearLayout>
 
                         <TextView
                             android:id="@+id/text_return_date"
@@ -249,14 +351,14 @@
                             android:layout_height="wrap_content"
                             android:text="@string/_21_arp"
                             android:textAlignment="center"
-                            android:textColor="#ff914d"
+                            android:textColor="@color/colorPrimary"
                             android:textStyle="bold" />
 
                         <TextView
                             android:id="@+id/text_return_day"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Friday 2020"
+                            android:text="@string/friday_2020"
                             android:textAlignment="center"
                             android:textSize="12sp" />
 
@@ -273,7 +375,7 @@
                     android:layout_marginLeft="20dp"
                     android:layout_marginTop="21dp"
                     android:layout_marginRight="20dp"
-                    android:background="#ff914d" />
+                    android:background="@color/colorPrimary" />
 
                 <LinearLayout
                     android:id="@+id/passenger_info_layout"
@@ -282,6 +384,7 @@
                     android:layout_below="@id/line_separator_date_passenger"
                     android:layout_marginTop="7dp"
                     android:orientation="horizontal"
+                    android:baselineAligned="false"
                     android:weightSum="4">
 
                     <LinearLayout
@@ -306,7 +409,7 @@
                                 android:layout_height="wrap_content"
                                 android:text="@string/passenger_label_text"
                                 android:textAlignment="center"
-                                android:textColor="#000000"
+                                android:textColor="@color/grey"
                                 android:textSize="15sp" />
 
                             <TextView
@@ -315,7 +418,7 @@
                                 android:layout_height="wrap_content"
                                 android:text="@string/adults_label"
                                 android:textAlignment="center"
-                                android:textColor="#ff914d"
+                                android:textColor="@color/colorPrimary"
                                 android:textSize="18sp"
                                 android:textStyle="bold" />
 
@@ -340,13 +443,15 @@
                                 android:id="@+id/adult_increase"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                app:srcCompat="@drawable/ic_adult_increase_24dp" />
+                                app:srcCompat="@drawable/count_increase"
+                                tools:ignore="ContentDescription" />
 
                             <TextView
+                                android:id="@+id/textView_adults_count"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
-                                android:text="0"
+                                android:text="@string/_0"
                                 android:textAlignment="center"
                                 android:textColor="#ff914d"
                                 android:textSize="18sp"
@@ -356,7 +461,8 @@
                                 android:id="@+id/adult_decrease"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                app:srcCompat="@drawable/ic_adult_decrease_24dp" />
+                                app:srcCompat="@drawable/count_decrease"
+                                tools:ignore="ContentDescription" />
                         </LinearLayout>
 
                     </LinearLayout>
@@ -377,7 +483,6 @@
                             android:gravity="center|start"
                             android:orientation="vertical">
 
-
                             <TextView
                                 android:id="@+id/text_child_label"
                                 android:layout_width="wrap_content"
@@ -385,7 +490,7 @@
                                 android:layout_marginTop="19dp"
                                 android:text="@string/children_text"
                                 android:textAlignment="center"
-                                android:textColor="#ff914d"
+                                android:textColor="@color/colorPrimary"
                                 android:textSize="18sp"
                                 android:textStyle="bold" />
 
@@ -410,13 +515,15 @@
                                 android:id="@+id/child_increase"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                app:srcCompat="@drawable/ic_adult_increase_24dp" />
+                                app:srcCompat="@drawable/count_increase"
+                                tools:ignore="ContentDescription" />
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
-                                android:text="0"
+                                android:id="@+id/textView_children_count"
+                                android:text="@string/_0"
                                 android:textAlignment="center"
                                 android:textColor="#ff914d"
                                 android:textSize="18sp"
@@ -426,7 +533,8 @@
                                 android:id="@+id/child_decrease"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                app:srcCompat="@drawable/ic_adult_decrease_24dp" />
+                                app:srcCompat="@drawable/count_decrease"
+                                tools:ignore="ContentDescription" />
 
                         </LinearLayout>
 
@@ -443,7 +551,7 @@
                     android:layout_marginLeft="20dp"
                     android:layout_marginTop="11dp"
                     android:layout_marginRight="20dp"
-                    android:background="#ff914d" />
+                    android:background="@color/colorPrimary" />
 
                 <LinearLayout
                     android:id="@+id/class_layout"
@@ -470,11 +578,11 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="Economy"
-                            android:textColor="#000000"
+                            android:text="@string/economy"
+                            android:textColor="@color/grey"
                             android:textSize="10sp"
                             app:shapeAppearance="@style/Rounded"
-                            app:strokeColor="#ff914d"
+                            app:strokeColor="@color/colorPrimary"
                             tools:ignore="SmallSp" />
 
                         <com.google.android.material.button.MaterialButton
@@ -483,11 +591,11 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="Business"
-                            android:textColor="#000000"
+                            android:text="@string/business"
+                            android:textColor="@color/grey"
                             android:textSize="10sp"
                             app:shapeAppearance="@style/Rounded"
-                            app:strokeColor="#ff914d"
+                            app:strokeColor="@color/grey"
                             tools:ignore="SmallSp" />
 
                         <com.google.android.material.button.MaterialButton
@@ -496,11 +604,11 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="First Class"
-                            android:textColor="#000000"
+                            android:text="@string/first_class"
+                            android:textColor="@color/grey"
                             android:textSize="10sp"
                             app:shapeAppearance="@style/Rounded"
-                            app:strokeColor="#ff914d"
+                            app:strokeColor="@color/colorPrimary"
                             tools:ignore="SmallSp" />
 
                     </com.google.android.material.button.MaterialButtonToggleGroup>
@@ -516,7 +624,7 @@
                     android:layout_marginLeft="20dp"
                     android:layout_marginTop="11dp"
                     android:layout_marginRight="20dp"
-                    android:background="#ff914d" />
+                    android:background="@color/colorPrimary" />
 
                 <CheckBox
                     android:id="@+id/checkbox_non_stop_flight"
@@ -526,7 +634,7 @@
                     android:layout_centerHorizontal="true"
                     android:text="@string/non_stop_check_box"
                     android:textAlignment="center"
-                    android:textColor="#7a7777"
+                    android:textColor="@color/grey"
                     android:textSize="12sp" />
 
                 <Button
@@ -538,7 +646,7 @@
                     android:layout_marginBottom="25dp"
                     android:background="@drawable/round_corner_button"
                     android:text="@string/search_flights_label"
-                    android:textColor="#ffffff" />
+                    android:textColor="@color/white" />
 
             </RelativeLayout>
 
