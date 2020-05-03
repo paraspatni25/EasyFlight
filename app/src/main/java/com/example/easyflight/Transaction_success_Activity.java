@@ -2,6 +2,7 @@ package com.example.easyflight;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
@@ -13,29 +14,18 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class Transaction_success_Activity extends AppCompatActivity {
 
-    TextView Back;
-    ImageView back;
+    TextView Back_text;
+    ImageView back_image;
     ImageView Blink_image;
-    ImageView setting;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_transaction_success_);
 
-        setting = findViewById(R.id.button_setting);
-        setting.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(Transaction_success_Activity.this, SettingActivity.class);
-                startActivity(i);
-            }
-        });
-
         //Creating an on click listener so that user can redirect back to dashboard activity.
-        Back = findViewById(R.id.text_back);
-        Back.setOnClickListener(new View.OnClickListener() {
+        Back_text = findViewById(R.id.text_back);
+        Back_text.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(Transaction_success_Activity.this, DashboardActivity.class);
@@ -43,9 +33,11 @@ public class Transaction_success_Activity extends AppCompatActivity {
 
 
             }
-        });//Creating an on click listener so that user can redirect back to dashboard activity.
-        back = findViewById(R.id.imageView_back);
-        back.setOnClickListener(new View.OnClickListener() {
+        });
+
+        //Creating an on click listener so that user can redirect back to dashboard activity.
+        back_image = findViewById(R.id.imageView_back);
+        back_image.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(Transaction_success_Activity.this, DashboardActivity.class);
@@ -62,6 +54,19 @@ public class Transaction_success_Activity extends AppCompatActivity {
         animation.setRepeatCount(Animation.INFINITE); //repeating indefinitely
         animation.setRepeatMode(Animation.REVERSE); //animation will start from end point once ended.
         Blink_image.startAnimation(animation); //to start animation
+
+
+        new Handler().postDelayed(new Runnable() {
+
+            @Override
+            public void run() {
+
+                Intent i = new Intent(Transaction_success_Activity.this, DashboardActivity.class);
+                startActivity(i);
+
+                finish();
+            }
+        }, 10000);
     }
 
 }

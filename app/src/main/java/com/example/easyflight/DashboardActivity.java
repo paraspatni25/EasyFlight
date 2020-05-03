@@ -8,6 +8,7 @@ import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -158,8 +159,21 @@ public class DashboardActivity extends AppCompatActivity {
         Search.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(DashboardActivity.this, SearchResultActivity.class);
-                startActivity(i);
+
+                final int child = Integer.parseInt(children_count.getText().toString());
+                final int adult = Integer.parseInt(adults_count.getText().toString());
+                if (child > 0 && adult == 0) {
+
+                    Toast.makeText(DashboardActivity.this, "Children must be accompnied with an adult", Toast.LENGTH_LONG).show();
+
+                } else if (child == 0 && adult == 0) {
+
+                    Toast.makeText(DashboardActivity.this, "You must add a passenger", Toast.LENGTH_LONG).show();
+
+                } else {
+                    Intent i = new Intent(DashboardActivity.this, SearchResultActivity.class);
+                    startActivity(i);
+                }
             }
         });
     }
