@@ -15,6 +15,8 @@ public class Flight_infoActivity extends AppCompatActivity {
 
     TextView departureStation, arrivalStation, departureTime, arrivalTime, departureCode, arrivalCode, haltTime, price;
     Button paymentButton;
+    ImageView setting;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,6 +53,15 @@ public class Flight_infoActivity extends AppCompatActivity {
         arrivalCode.setText(airWaysName + " " + flightCode + " . Boeing 777-300er");
         haltTime.setText(flightHaltTime);
         price.setText("$" + flightPrice);
+
+        setting = findViewById(R.id.button_setting);
+        setting.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(Flight_infoActivity.this, SettingActivity.class);
+                startActivity(i);
+            }
+        });
 
 
         Back = findViewById(R.id.back_to_login);

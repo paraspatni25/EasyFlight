@@ -22,630 +22,795 @@
             android:text="@string/secure_checkout"
             android:textColor="@color/white"
             android:textSize="18sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            tools:ignore="RelativeOverlap" />
+
+        <ImageView
+            android:id="@+id/button_setting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginEnd="20dp"
+            android:src="@drawable/settings"
+            tools:ignore="ContentDescription" />
     </RelativeLayout>
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/card_traveller_details"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="7dp"
-            app:cardCornerRadius="10dp"
-            app:cardElevation="7dp">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
 
-            <RelativeLayout
+            <androidx.cardview.widget.CardView
+                android:id="@+id/alert_card"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <TextView
-                    android:id="@+id/textView_title_shipping_method"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="20dp"
-                    android:text="@string/who_s_travelling"
-                    android:textAlignment="center"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/text_traveller_name"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_below="@+id/textView_title_shipping_method"
-                    android:text="@string/traveller_names_must_match_government_issued_nphoto_id_exactly"
-                    android:textAlignment="center"
-                    android:textSize="12sp" />
-
-                <TextView
-                    android:id="@+id/text_first_name"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/text_traveller_name"
-                    android:layout_marginTop="7dp"
-                    android:text="First name*"
-                    android:textAlignment="center"
-                    android:textColor="@color/grey"
-                    android:textSize="15sp" />
-
-                <EditText
-                    android:id="@+id/editView_first_name"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/text_first_name"
-                    android:layout_margin="20sp"
-                    android:autofillHints="First name"
-                    android:hint="First name"
-                    android:importantForAutofill="yes"
-                    android:inputType="text" />
-
-                <TextView
-                    android:id="@+id/text_middle_name"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/editView_first_name"
-                    android:layout_marginTop="7dp"
-                    android:text="Middle name"
-                    android:textAlignment="center"
-                    android:textColor="@color/grey"
-                    android:textSize="15sp" />
-
-                <EditText
-                    android:id="@+id/editView_middle_name"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/text_middle_name"
-                    android:layout_margin="20sp"
-                    android:autofillHints="Middle name"
-                    android:hint="Middle name"
-                    android:importantForAutofill="yes"
-                    android:inputType="text" />
-
-                <TextView
-                    android:id="@+id/text_last_name"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/editView_middle_name"
-                    android:layout_marginTop="7dp"
-                    android:text="Last name*"
-                    android:textAlignment="center"
-                    android:textColor="@color/grey"
-                    android:textSize="15sp" />
-
-                <EditText
-                    android:id="@+id/editView_last_name"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/text_last_name"
-                    android:layout_margin="20sp"
-                    android:autofillHints="Last name"
-                    android:hint="Last name"
-                    android:importantForAutofill="yes"
-                    android:inputType="text" />
-
-                <TextView
-                    android:id="@+id/text_country_territory"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/editView_last_name"
-                    android:layout_marginTop="7dp"
-                    android:text="Country/Territory Code*"
-                    android:textAlignment="center"
-                    android:textColor="@color/grey"
-                    android:textSize="15sp" />
-
-                <EditText
-                    android:id="@+id/editView_country_territory"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/text_country_territory"
-                    android:layout_margin="20sp"
-                    android:autofillHints="Last name"
-                    android:hint="Canada +1"
-                    android:importantForAutofill="yes"
-                    android:inputType="text" />
-
-                <TextView
-                    android:id="@+id/text_phone"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/editView_country_territory"
-                    android:layout_marginTop="7dp"
-                    android:text="Phone Number*"
-                    android:textAlignment="center"
-                    android:textColor="@color/grey"
-                    android:textSize="15sp" />
-
-                <EditText
-                    android:id="@+id/edit_view_phone"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/text_phone"
-                    android:layout_margin="20sp"
-                    android:autofillHints="Phone Number"
-                    android:hint="In case we need to reach you"
-                    android:inputType="phone" />
-
-                <CheckBox
-                    android:id="@+id/checkBox_alert"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/edit_view_phone"
-                    android:text="Receive text alert about this trip"
-                    android:textColor="@color/grey" />
-
-                <TextView
-                    android:id="@+id/text_passport"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/checkBox_alert"
-                    android:layout_marginTop="7dp"
-                    android:text="Passport*"
-                    android:textAlignment="center"
-                    android:textColor="@color/grey"
-                    android:textSize="15sp" />
-
-                <EditText
-                    android:id="@+id/editView_passport"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/text_passport"
-                    android:layout_margin="20sp"
-                    android:autofillHints="Phone Number"
-                    android:hint="Canada"
-                    android:inputType="phone" />
-
-                <TextView
-                    android:id="@+id/text_gender"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/editView_passport"
-                    android:layout_marginTop="7dp"
-                    android:text="Gender*"
-                    android:textAlignment="center"
-                    android:textColor="@color/grey"
-                    android:textSize="15sp" />
-
-                <RadioGroup
-                    android:id="@+id/button_gender"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/text_gender"
-                    android:gravity="center_horizontal"
-                    android:orientation="horizontal"
-                    android:weightSum="2">
-
-                    <RadioButton
-                        android:id="@+id/button_male"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:checked="true"
-                        android:text="Male"
-                        android:textSize="12sp" />
-
-                    <RadioButton
-                        android:id="@+id/button_female"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="Female"
-                        android:textSize="12sp" />
-
-                </RadioGroup>
-
-                <TextView
-                    android:id="@+id/text_d_o_b"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/button_gender"
-                    android:layout_marginTop="7dp"
-                    android:text="Date of birth*"
-                    android:textAlignment="center"
-                    android:textColor="@color/grey"
-                    android:textSize="15sp" />
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginRight="15dp"
+                app:cardCornerRadius="15dp"
+                app:cardElevation="7dp">
 
                 <LinearLayout
-                    android:id="@+id/layout_d_o_b"
+                    android:id="@+id/alert_layout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/text_d_o_b"
-                    android:orientation="horizontal"
-                    android:weightSum="3">
+                    android:background="@color/blue"
+                    android:orientation="horizontal">
 
-                    <EditText
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:paddingStart="15dp"
+                        android:paddingEnd="15dp"
+                        android:src="@drawable/warning_alert_box"
+                        tools:ignore="ContentDescription" />
+
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="10sp"
-                        android:layout_marginEnd="10sp"
-                        android:layout_weight="1"
-                        android:autofillHints="Day"
-                        android:hint="Day"
-                        android:inputType="date" />
+                        android:orientation="vertical">
 
-                    <EditText
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="10sp"
-                        android:layout_marginEnd="10sp"
-                        android:layout_weight="1"
-                        android:autofillHints="Month"
-                        android:hint="Month"
-                        android:inputType="date" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:text="@string/travel_advisory"
+                            android:textAllCaps="false"
+                            android:textColor="@color/white"
+                            android:textStyle="bold" />
 
-                    <EditText
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="10sp"
-                        android:layout_marginEnd="10sp"
-                        android:layout_weight="1"
-                        android:autofillHints="Year"
-                        android:hint="Year"
-                        android:inputType="date" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:text="@string/travel_warning"
+                            android:textColor="@color/white" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:background="@drawable/underline_text"
+                            android:text="@string/find_out_more"
+                            android:textColor="@color/white" />
+
+                    </LinearLayout>
 
                 </LinearLayout>
 
-                <TextView
-                    android:id="@+id/text_seat_select"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/layout_d_o_b"
-                    android:layout_marginTop="7dp"
-                    android:text="Seat selection"
-                    android:textAlignment="center"
-                    android:textColor="@color/grey"
-                    android:textSize="15sp" />
+            </androidx.cardview.widget.CardView>
 
-                <Button
-                    android:id="@+id/button_seat_select"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/text_seat_select"
-                    android:layout_marginLeft="25dp"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginRight="25dp"
-                    android:layout_marginBottom="20dp"
-                    android:background="@drawable/round_corner_button"
-                    android:text="Choose seats"
-                    android:textColor="@color/white"
-                    android:textSize="16sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/text_more"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/button_seat_select"
-                    android:layout_marginTop="7dp"
-                    android:text="Frequent flyer, TSA precheck and more"
-                    android:textAlignment="center"
-                    android:textColor="@color/colorPrimary"
-                    android:textSize="12sp" />
-
-            </RelativeLayout>
-
-        </androidx.cardview.widget.CardView>
-
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/payment_detail_card"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="7dp"
-            app:cardCornerRadius="10dp"
-            app:cardElevation="7dp">
-
-            <RelativeLayout
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_traveller_details"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/alert_card"
+                android:layout_margin="7dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="7dp">
 
-                <TextView
-                    android:id="@+id/text_ask_payment"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="7dp"
-                    android:background="@drawable/lock"
-                    android:text="How would you like to /npay?"
-                    android:textAlignment="center"
-                    android:textColor="@color/grey"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
-
-                <RadioGroup
-                    android:id="@+id/button_group"
+                <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/text_ask_payment"
-                    android:layout_marginStart="10sp"
-                    android:layout_marginTop="11dp"
-                    android:layout_marginEnd="10sp"
-                    android:gravity="center_horizontal"
-                    android:orientation="horizontal"
-                    android:weightSum="3">
+                    android:layout_height="match_parent">
 
-                    <RadioButton
-                        android:id="@+id/button_express"
+                    <TextView
+                        android:id="@+id/textView_title_shipping_method"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="20dp"
+                        android:text="@string/who_s_travelling"
+                        android:textAlignment="center"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/text_traveller_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@+id/textView_title_shipping_method"
+                        android:layout_marginStart="20dp"
+                        android:text="@string/traveller_names_must_match_government_issued_nphoto_id_exactly"
+                        android:textAlignment="textStart"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/text_first_name"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:checked="true"
-                        android:text="American Express"
-                        android:textSize="13sp" />
-
-                    <RadioButton
-                        android:id="@+id/button_no_cost"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="Visa"
-                        android:textSize="13sp" />
-
-                    <RadioButton
-                        android:id="@+id/button_pickup"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="Mastercard"
-                        android:textSize="13sp" />
-
-                </RadioGroup>
-
-                <TextView
-                    android:id="@+id/text_name_on_card"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/button_group"
-                    android:layout_marginTop="7dp"
-                    android:text="Name on card*"
-                    android:textColor="@color/grey"
-                    android:textSize="15sp" />
-
-                <EditText
-                    android:id="@+id/editView_name_on_card"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/text_name_on_card"
-                    android:layout_margin="20dp"
-                    android:hint="Name on card"
-                    android:inputType="textPersonName"
-                    tools:ignore="Autofill" />
-
-                <TextView
-                    android:id="@+id/text_card_debit_credit"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/editView_name_on_card"
-                    android:layout_marginTop="7dp"
-                    android:text="Debit/Credit card number*"
-                    android:textColor="@color/grey"
-                    android:textSize="15sp" />
-
-                <EditText
-                    android:id="@+id/editView_card_number"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/text_card_debit_credit"
-                    android:layout_margin="20dp"
-                    android:background="@drawable/lock"
-                    android:inputType="number"
-                    tools:ignore="Autofill,LabelFor" />
-
-                <LinearLayout
-                    android:id="@+id/layout_card_expiration_date"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/editView_card_number"
-                    android:orientation="horizontal"
-                    android:weightSum="2">
-
+                        android:layout_below="@+id/text_traveller_name"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="7dp"
+                        android:text="@string/first_name_mandatory"
+                        android:textAlignment="center"
+                        android:textColor="@color/grey"
+                        android:textSize="15sp" />
 
                     <EditText
+                        android:id="@+id/editView_first_name"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="10sp"
-                        android:layout_marginEnd="10sp"
-                        android:layout_weight="1"
-                        android:autofillHints="Month"
-                        android:hint="Month"
-                        android:inputType="date" />
+                        android:layout_below="@+id/text_first_name"
+                        android:layout_marginStart="20sp"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginBottom="15dp"
+                        android:autofillHints="First name"
+                        android:hint="@string/first_name"
+                        android:importantForAutofill="yes"
+                        android:inputType="text" />
+
+                    <TextView
+                        android:id="@+id/text_middle_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/editView_first_name"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="7dp"
+                        android:text="@string/middle_name_mandatory"
+                        android:textAlignment="center"
+                        android:textColor="@color/grey"
+                        android:textSize="15sp" />
 
                     <EditText
+                        android:id="@+id/editView_middle_name"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="10sp"
-                        android:layout_marginEnd="10sp"
-                        android:layout_weight="1"
-                        android:autofillHints="Year"
-                        android:hint="Year"
-                        android:inputType="date" />
+                        android:layout_below="@+id/text_middle_name"
+                        android:layout_marginStart="20sp"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginBottom="15dp"
+                        android:autofillHints="Middle name"
+                        android:hint="@string/middle_name"
+                        android:importantForAutofill="yes"
+                        android:inputType="text" />
 
-                </LinearLayout>
+                    <TextView
+                        android:id="@+id/text_last_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/editView_middle_name"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="7dp"
+                        android:text="@string/last_name_mandatory"
+                        android:textAlignment="center"
+                        android:textColor="@color/grey"
+                        android:textSize="15sp" />
 
-                <TextView
-                    android:id="@+id/text_security"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/layout_card_expiration_date"
-                    android:layout_marginTop="7dp"
-                    android:text="Security code*"
-                    android:textColor="@color/grey"
-                    android:textSize="15sp" />
+                    <EditText
+                        android:id="@+id/editView_last_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/text_last_name"
+                        android:layout_marginStart="20sp"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginBottom="15dp"
+                        android:autofillHints="Last name"
+                        android:hint="@string/last_name"
+                        android:importantForAutofill="yes"
+                        android:inputType="text" />
 
-                <EditText
-                    android:id="@+id/editView_security_code"
+                    <TextView
+                        android:id="@+id/text_country_territory"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/editView_last_name"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="7dp"
+                        android:text="@string/country_territory_code"
+                        android:textAlignment="center"
+                        android:textColor="@color/grey"
+                        android:textSize="15sp" />
+
+                    <EditText
+                        android:id="@+id/editView_country_territory"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/text_country_territory"
+                        android:layout_marginStart="20sp"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginBottom="15dp"
+                        android:autofillHints="Last name"
+                        android:hint="Canada +1"
+                        android:importantForAutofill="yes"
+                        android:inputType="text"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/text_phone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/editView_country_territory"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="7dp"
+                        android:text="@string/phone_number"
+                        android:textAlignment="center"
+                        android:textColor="@color/grey"
+                        android:textSize="15sp" />
+
+                    <EditText
+                        android:id="@+id/edit_view_phone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/text_phone"
+                        android:layout_marginStart="20sp"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginBottom="15dp"
+                        android:autofillHints="Phone Number"
+                        android:hint="@string/in_case_we_need_to_reach_you"
+                        android:inputType="phone"
+                        android:maxLength="10" />
+
+                    <CheckBox
+                        android:id="@+id/checkBox_alert"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/edit_view_phone"
+                        android:layout_marginStart="20dp"
+                        android:text="@string/receive_text_alert_about_this_trip"
+                        android:textColor="@color/grey" />
+
+                    <TextView
+                        android:id="@+id/text_passport"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/checkBox_alert"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="7dp"
+                        android:text="@string/passport"
+                        android:textAlignment="center"
+                        android:textColor="@color/grey"
+                        android:textSize="15sp" />
+
+                    <EditText
+                        android:id="@+id/editView_passport"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/text_passport"
+                        android:layout_marginStart="20sp"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginBottom="15dp"
+                        android:autofillHints="Phone Number"
+                        android:hint="@string/canada"
+                        android:inputType="phone" />
+
+                    <TextView
+                        android:id="@+id/text_gender"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/editView_passport"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="7dp"
+                        android:text="@string/gender"
+                        android:textAlignment="center"
+                        android:textColor="@color/grey"
+                        android:textSize="15sp" />
+
+                    <RadioGroup
+                        android:id="@+id/button_gender"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/text_gender"
+                        android:layout_marginStart="20sp"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginBottom="15dp"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <RadioButton
+                            android:id="@+id/button_male"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:checked="true"
+                            android:text="@string/male"
+                            android:textSize="12sp" />
+
+                        <RadioButton
+                            android:id="@+id/button_female"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/female"
+                            android:textSize="12sp" />
+
+                    </RadioGroup>
+
+                    <TextView
+                        android:id="@+id/text_d_o_b"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/button_gender"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="7dp"
+                        android:text="@string/date_of_birth"
+                        android:textAlignment="center"
+                        android:textColor="@color/grey"
+                        android:textSize="15sp" />
+
+                    <LinearLayout
+                        android:id="@+id/layout_d_o_b"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/text_d_o_b"
+                        android:layout_marginStart="20sp"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginBottom="15dp"
+                        android:orientation="horizontal"
+                        android:weightSum="3">
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:autofillHints="Day"
+                            android:hint="@string/day"
+                            android:inputType="date" />
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10sp"
+                            android:layout_marginEnd="10sp"
+                            android:layout_weight="1"
+                            android:autofillHints="Month"
+                            android:hint="@string/month"
+                            android:inputType="date" />
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10sp"
+                            android:layout_marginEnd="10sp"
+                            android:layout_weight="1"
+                            android:autofillHints="Year"
+                            android:hint="@string/year"
+                            android:inputType="date"
+                            android:maxLength="4" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/text_seat_select"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/layout_d_o_b"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="7dp"
+                        android:text="@string/seat_selection"
+                        android:textAlignment="center"
+                        android:textColor="@color/grey"
+                        android:textSize="15sp" />
+
+                    <Button
+                        android:id="@+id/button_seat_select"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/text_seat_select"
+                        android:layout_marginStart="25dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="150dp"
+                        android:layout_marginBottom="20dp"
+                        android:background="@drawable/round_corner_button"
+                        android:text="@string/choose_seats"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/text_more"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/button_seat_select"
+                        android:layout_marginTop="7dp"
+                        android:layout_marginBottom="10dp"
+                        android:text="@string/frequent_flyer_tsa_precheck_and_more"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="12sp" />
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/payment_detail_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/card_traveller_details"
+                android:layout_marginStart="7sp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="7dp"
+                android:layout_marginBottom="7dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="7dp">
+
+                <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/text_security"
-                    android:layout_margin="20dp"
-                    android:hint="CVV*"
-                    android:importantForAutofill="yes"
-                    android:inputType="number" />
+                    android:layout_height="wrap_content">
 
-                <View
-                    android:id="@+id/line_separator_payment_address"
-                    android:layout_width="fill_parent"
-                    android:layout_height="2dp"
-                    android:layout_below="@+id/editView_security_code"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginTop="7dp"
-                    android:layout_marginRight="5dp"
-                    android:layout_marginBottom="7dp"
-                    android:background="@color/grey" />
+                    <LinearLayout
+                        android:id="@+id/paymentMethod_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginRight="20dp"
+                        android:gravity="center|start"
+                        android:orientation="horizontal"
+                        tools:ignore="UseCompoundDrawables">
 
-                <TextView
-                    android:id="@+id/text_country_territory_address"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/line_separator_payment_address"
-                    android:layout_marginTop="7dp"
-                    android:text="Country/Territory*"
-                    android:textColor="@color/grey"
-                    android:textSize="15sp" />
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="10dp"
+                            android:src="@drawable/lock"
+                            tools:ignore="ContentDescription" />
 
-                <EditText
-                    android:id="@+id/editView_country_territory_address"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/text_security"
-                    android:layout_margin="20dp"
-                    android:hint="Canada"
-                    android:importantForAutofill="yes"
-                    android:inputType="number"
-                    tools:ignore="Autofill" />
+                        <TextView
+                            android:id="@+id/text_ask_payment"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/payment_option"
+                            android:textColor="@color/grey"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
 
-                <TextView
-                    android:id="@+id/text_billing_address_1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/editView_country_territory_address"
-                    android:layout_marginTop="7dp"
-                    android:text="Billing address 1*"
-                    android:textColor="@color/grey"
-                    android:textSize="15sp" />
+                    </LinearLayout>
 
-                <EditText
-                    android:id="@+id/editView__billing_address_1"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/text_billing_address_1"
-                    android:layout_margin="20dp"
-                    android:hint="(ex. 123 Main)"
-                    android:importantForAutofill="yes"
-                    android:inputType="textPostalAddress"
-                    tools:ignore="Autofill" />
+                    <RadioGroup
+                        android:id="@+id/button_group"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/paymentMethod_text"
+                        android:layout_marginTop="11dp"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal"
+                        android:weightSum="3">
 
-                <TextView
-                    android:id="@+id/text_billing_address_2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/editView__billing_address_1"
-                    android:layout_marginTop="7dp"
-                    android:text="Billing address 2"
-                    android:textColor="@color/grey"
-                    android:textSize="15sp" />
+                        <RadioButton
+                            android:id="@+id/button_express"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:checked="true"
+                            android:text="@string/american_express"
+                            android:textSize="13sp" />
 
-                <EditText
-                    android:id="@+id/editView__billing_address_2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/text_billing_address_2"
-                    android:layout_margin="20dp"
-                    android:hint="(ex. Suit 444, Apt. 00)"
-                    android:importantForAutofill="yes"
-                    android:inputType="textPostalAddress"
-                    tools:ignore="Autofill" />
+                        <RadioButton
+                            android:id="@+id/button_no_cost"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/visa"
+                            android:textSize="13sp" />
 
-                <TextView
-                    android:id="@+id/text_city"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/editView__billing_address_2"
-                    android:layout_marginTop="7dp"
-                    android:text="City*"
-                    android:textColor="@color/grey"
-                    android:textSize="15sp" />
+                        <RadioButton
+                            android:id="@+id/button_pickup"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/mastercard"
+                            android:textSize="13sp" />
 
-                <EditText
-                    android:id="@+id/editView_city"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/text_city"
-                    android:layout_margin="20dp"
-                    android:hint="city"
-                    android:importantForAutofill="yes"
-                    android:inputType="textPostalAddress"
-                    tools:ignore="Autofill" />
+                    </RadioGroup>
 
-                <TextView
-                    android:id="@+id/text_province"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/editView_city"
-                    android:layout_marginTop="7dp"
-                    android:text="Province*"
-                    android:textColor="@color/grey"
-                    android:textSize="15sp" />
+                    <TextView
+                        android:id="@+id/text_name_on_card"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/button_group"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="7dp"
+                        android:text="@string/name_on_card_text"
+                        android:textColor="@color/grey"
+                        android:textSize="15sp" />
 
-                <EditText
-                    android:id="@+id/editView_province"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/text_province"
-                    android:layout_margin="20dp"
-                    android:hint="QC,BC"
-                    android:importantForAutofill="yes"
-                    android:inputType="textPostalAddress"
-                    tools:ignore="Autofill" />
+                    <EditText
+                        android:id="@+id/editView_name_on_card"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/text_name_on_card"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginBottom="15dp"
+                        android:hint="@string/name_on_card"
+                        android:inputType="textPersonName"
+                        tools:ignore="Autofill" />
 
-                <TextView
-                    android:id="@+id/text_postal_code"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/editView_province"
-                    android:layout_marginTop="7dp"
-                    android:text="Postal code*"
-                    android:textColor="@color/grey"
-                    android:textSize="15sp" />
+                    <TextView
+                        android:id="@+id/text_card_debit_credit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/editView_name_on_card"
+                        android:layout_marginStart="20dp"
+                        android:text="@string/debit_credit_card_number"
+                        android:textColor="@color/grey"
+                        android:textSize="15sp" />
 
-                <EditText
-                    android:id="@+id/editView_postal_code"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/text_postal_code"
-                    android:layout_margin="20dp"
-                    android:hint="H2K 000"
-                    android:importantForAutofill="yes"
-                    android:inputType="textPostalAddress"
-                    tools:ignore="Autofill" />
+                    <EditText
+                        android:id="@+id/editView_card_number"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/text_card_debit_credit"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginBottom="15dp"
+                        android:drawableEnd="@drawable/lock"
+                        android:hint="@string/name_of_card_holder"
+                        android:inputType="number"
+                        android:maxLength="16"
+                        tools:ignore="Autofill,LabelFor" />
 
-                <CheckBox
-                    android:id="@+id/checkBox_remember_card"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/editView_postal_code"
-                    android:text="Remember this card for future use"
-                    android:textColor="@color/grey" />
+                    <LinearLayout
+                        android:id="@+id/layout_card_expiration_date"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/editView_card_number"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginBottom="15dp"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
 
-                <Button
-                    android:id="@+id/button_complete_booking"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/checkBox_remember_card"
-                    android:layout_marginLeft="25dp"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginRight="25dp"
-                    android:layout_marginBottom="20dp"
-                    android:background="@drawable/round_corner_button"
-                    android:text="Complete Booking"
-                    android:textSize="16sp"
-                    android:textStyle="bold" />
 
-            </RelativeLayout>
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="10sp"
+                            android:layout_weight="1"
+                            android:autofillHints="Month"
+                            android:hint="@string/month"
+                            android:inputType="date" />
 
-        </androidx.cardview.widget.CardView>
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="10sp"
+                            android:layout_weight="1"
+                            android:autofillHints="Year"
+                            android:hint="@string/year"
+                            android:inputType="date" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/text_security"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/layout_card_expiration_date"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="7dp"
+                        android:text="@string/security_code"
+                        android:textColor="@color/grey"
+                        android:textSize="15sp" />
+
+                    <EditText
+                        android:id="@+id/editView_security_code"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/text_security"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginBottom="15dp"
+                        android:hint="@string/cvv"
+                        android:importantForAutofill="yes"
+                        android:inputType="number"
+                        android:maxLength="3"
+                        tools:ignore="Autofill" />
+
+                    <View
+                        android:id="@+id/line_separator_payment_address"
+                        android:layout_width="fill_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@+id/editView_security_code"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="7dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginBottom="7dp"
+                        android:background="@color/grey" />
+
+                    <TextView
+                        android:id="@+id/text_country_territory_address"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/line_separator_payment_address"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="22dp"
+                        android:text="@string/country_territory"
+                        android:textColor="@color/grey"
+                        android:textSize="15sp" />
+
+                    <EditText
+                        android:id="@+id/editView_country_territory_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/text_country_territory_address"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginBottom="15dp"
+                        android:hint="@string/canada"
+                        android:importantForAutofill="yes"
+                        android:inputType="number"
+                        tools:ignore="Autofill" />
+
+                    <TextView
+                        android:id="@+id/text_billing_address_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/editView_country_territory_address"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="7dp"
+                        android:text="@string/billing_address_1"
+                        android:textColor="@color/grey"
+                        android:textSize="15sp" />
+
+                    <EditText
+                        android:id="@+id/editView__billing_address_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/text_billing_address_1"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginBottom="15dp"
+                        android:hint="@string/ex_123_main"
+                        android:importantForAutofill="yes"
+                        android:inputType="textPostalAddress"
+                        tools:ignore="Autofill" />
+
+                    <TextView
+                        android:id="@+id/text_billing_address_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/editView__billing_address_1"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="7dp"
+                        android:text="@string/billing_address_2"
+                        android:textColor="@color/grey"
+                        android:textSize="15sp" />
+
+                    <EditText
+                        android:id="@+id/editView__billing_address_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/text_billing_address_2"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginBottom="15dp"
+                        android:hint="@string/ex_suit_444_apt_00"
+                        android:importantForAutofill="yes"
+                        android:inputType="textPostalAddress"
+                        tools:ignore="Autofill" />
+
+                    <TextView
+                        android:id="@+id/text_city"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/editView__billing_address_2"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="7dp"
+                        android:text="@string/city_mandatory"
+                        android:textColor="@color/grey"
+                        android:textSize="15sp" />
+
+                    <EditText
+                        android:id="@+id/editView_city"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/text_city"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginBottom="15dp"
+                        android:hint="@string/city"
+                        android:importantForAutofill="yes"
+                        android:inputType="textPostalAddress"
+                        android:maxLength="20"
+                        tools:ignore="Autofill" />
+
+                    <TextView
+                        android:id="@+id/text_province"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/editView_city"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="7dp"
+                        android:text="@string/province"
+                        android:textColor="@color/grey"
+                        android:textSize="15sp" />
+
+                    <EditText
+                        android:id="@+id/editView_province"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/text_province"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginBottom="15dp"
+                        android:hint="@string/qc_bc"
+                        android:importantForAutofill="yes"
+                        android:inputType="textPostalAddress"
+                        tools:ignore="Autofill" />
+
+                    <TextView
+                        android:id="@+id/text_postal_code"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/editView_province"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="7dp"
+                        android:text="@string/postal_code"
+                        android:textColor="@color/grey"
+                        android:textSize="15sp" />
+
+                    <EditText
+                        android:id="@+id/editView_postal_code"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/text_postal_code"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginBottom="15dp"
+                        android:hint="@string/h2k_000"
+                        android:importantForAutofill="yes"
+                        android:inputType="textPostalAddress"
+                        android:maxLength="7"
+                        tools:ignore="Autofill" />
+
+                    <CheckBox
+                        android:id="@+id/checkBox_remember_card"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/editView_postal_code"
+                        android:layout_marginStart="20dp"
+                        android:text="@string/remember_this_card_for_future_use"
+                        android:textColor="@color/grey" />
+
+                    <Button
+                        android:id="@+id/button_complete_booking"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/checkBox_remember_card"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginRight="25dp"
+                        android:layout_marginBottom="20dp"
+                        android:background="@drawable/round_corner_button"
+                        android:text="@string/complete_booking"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
 
     </ScrollView>
 

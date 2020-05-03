@@ -19,6 +19,8 @@ public class DashboardActivity extends AppCompatActivity {
 
     ImageView Back;
     Button Search;
+    ImageView setting;
+
 
     ImageView increase_adult, increase_children, decrease_adult, decrease_children, departure_calendar, return_calendar;
     TextView adults_count, children_count, text_departure_date, text_return_date, text_departure_day, text_return_day;
@@ -139,6 +141,15 @@ public class DashboardActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(DashboardActivity.this, LoginActivity.class);
+                startActivity(i);
+            }
+        });
+
+        setting = findViewById(R.id.button_setting);
+        setting.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(DashboardActivity.this, SettingActivity.class);
                 startActivity(i);
             }
         });

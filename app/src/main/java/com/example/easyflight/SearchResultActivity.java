@@ -17,6 +17,8 @@ public class SearchResultActivity extends AppCompatActivity {
     ArrayList<FlightData> flights;
     RecyclerView recyclerView;
     ImageView Back;
+    ImageView setting;
+
 
 
     @Override
@@ -27,6 +29,15 @@ public class SearchResultActivity extends AppCompatActivity {
         recyclerView = findViewById(R.id.flight_result_recycler_view);
 
         generateRecyclerView();
+
+        setting = findViewById(R.id.button_setting);
+        setting.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(SearchResultActivity.this, SettingActivity.class);
+                startActivity(i);
+            }
+        });
 
         Back = findViewById(R.id.back_to_login);
         Back.setOnClickListener(new View.OnClickListener() {

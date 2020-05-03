@@ -33,6 +33,18 @@
             android:textSize="20sp"
             android:textStyle="bold" />
 
+        <ImageView
+            android:id="@+id/button_setting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginEnd="20dp"
+            android:src="@drawable/settings"
+            tools:ignore="ContentDescription" />
+
     </RelativeLayout>
 
     <androidx.cardview.widget.CardView
@@ -183,7 +195,7 @@
                             android:text="@string/delhi"
                             android:textAlignment="center"
                             android:textColor="@color/colorPrimary"
-                            android:textSize="18sp"
+                            android:textSize="17sp"
                             android:textStyle="bold" />
 
                     </LinearLayout>
@@ -225,11 +237,11 @@
 
                         <TextView
                             android:id="@+id/text_to_station"
-                            android:layout_width="wrap_content"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="@string/mumbai"
                             android:textColor="@color/colorPrimary"
-                            android:textSize="18sp"
+                            android:textSize="17sp"
                             android:textStyle="bold" />
 
                     </LinearLayout>
@@ -595,7 +607,7 @@
                             android:textColor="@color/grey"
                             android:textSize="10sp"
                             app:shapeAppearance="@style/Rounded"
-                            app:strokeColor="@color/grey"
+                            app:strokeColor="@color/colorPrimary"
                             tools:ignore="SmallSp" />
 
                         <com.google.android.material.button.MaterialButton
