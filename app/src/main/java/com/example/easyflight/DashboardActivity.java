@@ -12,6 +12,8 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.firebase.auth.FirebaseAuth;
+
 import java.text.DateFormatSymbols;
 import java.util.Calendar;
 import java.util.Locale;
@@ -20,7 +22,10 @@ public class DashboardActivity extends AppCompatActivity {
 
     ImageView Back;
     Button Search;
+    Button sign_out;
     ImageView setting;
+    FirebaseAuth mFirebaseAuth;
+    private FirebaseAuth.AuthStateListener mAuthStateListener;
 
 
     ImageView increase_adult, increase_children, decrease_adult, decrease_children, departure_calendar, return_calendar;
@@ -146,6 +151,16 @@ public class DashboardActivity extends AppCompatActivity {
             }
         });
 
+        sign_out = findViewById(R.id.button_sign_out);
+        sign_out.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FirebaseAuth.getInstance().signOut();
+                Intent i = new Intent(DashboardActivity.this, HomeActivity.class);
+                startActivity(i);
+            }
+        });
+
         setting = findViewById(R.id.button_setting);
         setting.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -164,7 +179,7 @@ public class DashboardActivity extends AppCompatActivity {
                 final int adult = Integer.parseInt(adults_count.getText().toString());
                 if (child > 0 && adult == 0) {
 
-                    Toast.makeText(DashboardActivity.this, "Children must be accompnied with an adult", Toast.LENGTH_LONG).show();
+                    Toast.makeText(DashboardActivity.this, "Children must be accompanied with an adult", Toast.LENGTH_LONG).show();
 
                 } else if (child == 0 && adult == 0) {
 

@@ -661,6 +661,17 @@
                     android:text="@string/search_flights_label"
                     android:textColor="@color/white" />
 
+                <Button
+                    android:id="@+id/button_sign_out"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/button_search_flights"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="25dp"
+                    android:background="@drawable/round_corner_button"
+                    android:text="Sign out"
+                    android:textColor="@color/white" />
+
             </RelativeLayout>
 
         </androidx.cardview.widget.CardView>

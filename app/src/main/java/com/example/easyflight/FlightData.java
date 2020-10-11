@@ -10,6 +10,15 @@ public class FlightData {
     private String flightPrice;
     private String flightStopNumber;
     private String airwaysName;
+    private String Id;
+
+    public String getId() {
+        return Id;
+    }
+
+    public void setId(String id) {
+        Id = id;
+    }
 
     public String getAirwaysName() {
         if (airwaysName == null)

@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "548810565877",
+    "firebase_url": "https://easy-flight-4faec.firebaseio.com",
+    "project_id": "easy-flight-4faec",
+    "storage_bucket": "easy-flight-4faec.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:548810565877:android:783fe7bdb8de34ed30fdbc",
+        "android_client_info": {
+          "package_name": "com.example.easyflight"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "548810565877-mq3sfv06lkiork38ua5jbp3kcirdqm0o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAkbbLvsIkW9WN-N8hYxsiq0aE9EXzlycg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "548810565877-mq3sfv06lkiork38ua5jbp3kcirdqm0o.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
